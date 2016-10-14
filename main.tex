@@ -2,6 +2,7 @@
 
 \usepackage{amsfonts,amsmath,amssymb}
 \usepackage{hyperref}
+\usepackage{graphicx}
 
 \author{Ali Dorostkar \and Anastasia Kruchinina}
 \title{\textsc{A new teaching style in computer programming}}
@@ -20,89 +21,76 @@ where the students learn by participating, participating and other methods.
 \section{Introduction} % (fold)
 \label{sec:introduction}
 
-Nowdays computers become an essential part of our lives.  ``I have
-always wished for my computer to be as easy to use as my telephone; my
-wish has come true because I can no longer figure out how to use my
-telephone.'' - Bjarne Stroustrup.  
+Nowadays computers become an essential part of our lives.  ``I have always wished
+for my computer to be as easy to use as my telephone; my wish has come true
+because I can no longer figure out how to use my telephone.'' - Bjarne
+Stroustrup.  
 
-Programming is between the first courses which computer science
-students take. There is a variety of programming languages which are
-tought in the introduction programming
-courses~\cite{de2002language}. Over the past years teacher discussed
-ways of teaching programming courses, how to teach and what.
+Programming is among the first courses that computer science students take.
+There is a variety of programming languages which are thought in introductory
+courses to programming ~\cite{de2002language}. Over the past years teacher
+discussed on ways of teaching and the contents of a programming courses.
 
-What does it mean to teach programming?
-
-``For a long time it puzzled me how something so expensive, so leading edge,
+\textbf{What does it mean to teach programming?}\\
+\emph{``For a long time it puzzled me how something so expensive, so leading edge,
 could be so useless. And then it occurred to me that a computer is a stupid
 machine with the ability to do incredibly smart things, while computer
 programmers are smart people with the ability to do incredibly stupid things.
-They are, in short, a perfect match. - Bill Bryson''
+They are, in short, a perfect match. - Bill Bryson''.}
 
-In our opinion, to teach programming means to teach how to interact
-with computer, explain your will to it. We should teach students how
-to deal with different ``surprises'' which computer may produce, in
-particular how to debug the code efficiently.
+In our opinion, to program means to interact with computers. Explain your will
+to the machine and watch it execute your commands to the later. To teach
+programming to students means to describe to them this interaction between human
+and computer, express the language that one communicates with this stupid
+machine, explain what the students should expect when they run a program and how
+the students should deal with different ``surprises'' which computer may
+produce, in particular how to debug the code efficiently.
 
-In~\cite{state_of_art} authors separate a process of writing the
-program into two phases. The problem solving phase includes
-understanding the problem and designing the algorithm to reach the
-solution. This phase requires the knowledge of the computer science
-concepts, software design techniques, critical thinking skills and
-ability to think abstractly.  In the second phase, called
-implementation phase, the ideas obtained in the problem solving phase
-are expressed in the executable form, translated into a programming
-language.
+In~\cite{state_of_art} the authors separate a process of writing the program
+into two phases. The problem solving phase includes understanding the problem
+and designing the algorithm to reach the solution. This phase requires the
+knowledge of the computer science concepts, software design techniques, critical
+thinking skills and ability to think abstractly. In the second phase, called
+implementation phase, the ideas obtained in the problem solving phase are
+expressed in the executable form, translated into a programming language.
 
-To master the implementation phase student must learn syntax of the
-chosen language and be familiar with development envinronment. It is
-common that novice students struggling to learn the most basic
-programming constructs, such as conditional and loop statements.
+To master the implementation phase student must learn syntax of a chosen
+programming language and be familiar with the development environment. It is
+common that novice students struggle to learn the most basic programming
+constructs, such as conditional and loop statements. This is due to the fact
+that the implementation is reliant on problem solving and that by merely
+teaching the syntax of a language, we are not providing enough information to
+trigger deep learning, or as \emph{Eric S. Raymond} puts it 
+\emph{``Computer science education cannot make anybody an expert programmer any
+more than studying brushes and pigment can make somebody an expert painter''}. 
 
+The traditional approach in teaching programming courses includes lectures and
+laboratory sessions. During the traditional lecture the teacher covers the
+main concepts and shows examples, while students are in general passive
+recipients of the information. During the lab sessions students solve practical
+assignments and examine individually the results. It is common that large groups
+of students are involved in the programming classes. Thus students usually work
+in small groups (2-3 persons) during the lab sessions. 
 
+According to Wirth~\cite{wirth}, the traditional lecturing has a number of
+limitations.  ``Firstly, students’ attention to what the instructor is saying
+(i.e. their ability to concentrate) decreases as the lecture proceeds. This lack
+of attention manifests itself in a reduction in the amount of information
+retained by the student. For the first 5-10 minutes of a typical 50-minute
+lecture a student remembers a high proportion of the information presented,
+after which the proportion of information preserved rapidly declines. Students
+typically retain 70\% from the first 10 minutes of lecture, and 20\% from the
+last 10 minutes.''
 
-``Computer science education cannot make anybody an expert programmer any
-more than studying brushes and pigment can make somebody an expert painter. -
-Eric S. Raymond'' 
-
-
-
-The tradition approach in teaching programming includes lectures and
-laboratory sessions.  During the traditional lecture the teacher
-covering the main concepts and showing examples, while students are in
-general passive recipients of the information. During the lab sessions
-students solve practical assignments and examined individually. It is
-common that the large groups of students are involved into the
-programming classes. Thus usually students work in small groups (2-3
-persons) during the lab sessions. 
-
-According to Wirth~\cite{wirth}, the traditional lecturing has a
-number of limitations.  ``Firstly, students’ attention to what the
-instructor is saying (i.e. their ability to concentrate) decreases as
-the lecture proceeds. This lack of attention manifests itself in a
-reduction in the amount of information retained by the student. For
-the first 5-10 minutes of a typical 50 minute lecture a student
-remembers a high proportion of the information presented, after which
-the proportion of information preserved rapidly declines. Students
-typically retain 70\% from the first 10 minutes of lecture, and 20\%
-from the last 10 minutes.''
-
-Moreover, the amount of the information stored in the long-term memory
-depends on the method of presenting informations, in particular in the
-amout of interaction with students.  Studies show that just 10\% of
-information  is retained in the long-term memory when person is
-reading, 50\% when hearing and seeing, 90\% when doing and discussing,
-and 95\% when teching and tutoring~\cite{magnesen}.
-
-Therefore, one can conclude that the traditional lecturing does not
-suit teaching programming.
-
-
-``In theory, theory and practice are the same. In practice,
-they’re not. - Yoggi Berra'' 
-
-
-
+Moreover, the amount of the information stored in the long-term memory depends
+on the method of presenting informations, in particular in the amount of
+interaction with students.  Studies show that just 10\% of information  is
+retained in the long-term memory when person is reading, 50\% when hearing and
+seeing, 90\% when doing and discussing, and 95\% when teaching and
+tutoring~\cite{magnesen}. Therefore, one can conclude that the traditional
+lecturing techniques does not suit teaching of the programming courses.
+\emph{``In theory, theory and practice are the same. In practice,
+they’re not. - Yoggi Berra'' }
 
 In programming courses students usually have different backgrounds,
 different learning habits and different motivation to study. As
@@ -116,8 +104,8 @@ University. The idea was to remove completely traditional lecture and
 instead do more lab sessions (workshops). ``The teachers might give
 short presentations, 5 – 10 minutes, at the beginning of the workshop,
 or in between, that could be recorded, but mainly the students were
-working on their tasks.\ldots When they see they need more knowledge
-or help they are can look for recorded material and listen to the
+working on their tasks\ldots. When they see they need more knowledge
+or help they are able to look through the recorded material and listen to the
 teacher and do not have to wait for him. \ldots Students solve
 exercises at very different speed and if they can find help in the
 recorded material to keep on working they do not have to wait for the
@@ -133,6 +121,65 @@ activities.  In addition, authors provide a concrete example of the
 lecture structure discussing while-loops. The conclusion was that
 ``students are more engaged in this environment, and appreciate the
 ability to interact with their classmates and instructor.''.
+
+In the course ``Programming of Parallel Computers'' given by Uppsala university, 
+the teachers implemented flipped classroom teaching method where the
+lectures are available online\footnote{\url{www.scalablelearning.com}}
+and the lectures' time are spent looking through different examples
+where the students try to solve short programming problems. After each
+exercise the teacher shows his solution and discusses the code. We
+analyzed the course evaluation and for reduced the answers to above
+and below average score. We see that of all students in the course
+\begin{itemize}
+	\item $62\%$ of the attendees think that the course quality is
+		above average while $38\%$ are disappointed with the
+		overall quality.
+	\item $92\%$ of the students think that the course difficulty
+		was above average.
+	\item $100\%$ think that the amount of work was appropriate
+		with regards to the attained credits.
+	\item Everyone thought that the course is relevant for them.
+	\item $84\%$ believed that the course is interesting while the
+		remaining $16\%$ didn't agree.
+	\item $74\%$ believed that their prior knowledge has helped
+		them in understanding the course.
+	\item Half the class expressed (using text comments in the
+		positive opinion section) that the flipped classroom has helped them.
+	\item In the negative opinions section, the students demanded
+		a broader use of flipped classroom in the course.
+	\item More than $60\%$ of the class thought that the
+		traditional lecture hasn't helped them.
+	\item $88\%$ thought that the flipped classroom has
+		contributed to their learning.
+	\item All students agreed that the labs and assignments were helpful in
+		understanding the content.
+	\item Almost $90\%$ didn't answer or should negative opinion
+		regarding the helpfulness of the books and notes.
+\end{itemize}
+From the above points we can deduce that the students in this
+programming course prefer hands-on approach, meaning that, they have
+learned better by performing the task instead of sitting in the class
+passively. We also see that although the students' opinion are
+positive towards flipped classrooms, there is still space for
+improvement since almost $40\%$ of the class think that the course
+quality could be better and $70\%$ have relied on their prior
+knowledge to get through the course.
+
+As a complementary analysis of the flipped classroom and hands-on
+technique, the teachers introduced each model separately and looked at
+the final grades of the students. Figure~\ref{fig:grades} shows the
+results of this study. We can clearly see the positive effect of the
+flipped classroom and hands-on sessions. The students' grades are
+generally shifted to the right (i.e higher grades).
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{fliped_effect.eps}
+	\caption{The effect of flipped classroom on the grades of students}
+	\label{fig:grades}
+\end{figure}
+(!!! COMMENT: I don't think Ali's experience is needed, what Jarmo
+gave us is with evidence )
 (!!! COMMENT: I think here is a good example of a sample lab-lecture, I think
 similar as Ali did )
 

@@ -1,3 +1,4 @@
+*.swp
 *.ptex
 *.aux
 *.fdb_latexmk

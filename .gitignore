@@ -1,3 +1,4 @@
+*.latex.json
 *.swp
 *.ptex
 *.aux

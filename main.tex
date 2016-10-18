@@ -3,6 +3,9 @@
 \usepackage{amsfonts,amsmath,amssymb}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[linesnumbered]{algorithm2e}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\SetKwRepeat{Do}{do}{while}
 
 \author{Ali Dorostkar \and Anastasia Kruchinina}
 \title{\textsc{A new teaching style in computer programming}}
@@ -12,8 +15,8 @@
 
 \maketitle \begin{abstract}
 In this project we introduce a teaching technique for fields that require
-practical work in order to be understood deeply. The focus of this article is 
-to provide ways to simulate deep learning among students. To this end we describe 
+practical work in order to be understood deeply. The focus of this article is
+to provide ways to simulate deep learning among students. To this end we describe
 details of a lecture session tailored specifically for Programming courses
 where the students learn by participating, participating and other methods.
 \end{abstract}
@@ -24,16 +27,30 @@ where the students learn by participating, participating and other methods.
 Nowadays computers become an essential part of our lives.  \emph{``I have always wished
 for my computer to be as easy to use as my telephone; my wish has come true
 because I can no longer figure out how to use my telephone.'' - Bjarne
-Stroustrup.}  
+Stroustrup.}
 
 Programming is among the first courses that computer science students take.
 There is a variety of programming languages which are thought in introductory
 courses to programming ~\cite{de2002language}. Over the past years teachers
 discussed on ways of teaching and the contents of a programming courses.
 
-The outline of the report is as follows; In Section~\ref{sec:plan} we present the expected learning outcome of the course and define structure of the new lecture. We present the tools and facilities needed in order to be able to give this lecture. In Section~\ref{sec:analysis} the lecture is analysed, the possible implications of this model on student learning is predicted and we also show that such lecture would fulfil the requirements of the course. Finally we conclude the report in Section~\ref{sec:conclusion} where we give general comments and future plan for the presented model.
+The outline of the report is as follows; In 
+Section~\ref{sec:meaning_of_programming} we look at the expectations 
+from programming courses and descuss what we believe a programming 
+course should focus on. Section~\ref{sec:teaching_methods} covers 
+some of the mainly used teaching methods for programming courses while we provide 
+our own and our colleagues experiences in Section~\ref{sec:pract_exp}. 
+In Section~\ref{sec:plan} we present the expected learning outcome of 
+the course and define structure of the new lecture. We present the tools and facilities needed in order to be able to give this lecture. In
+Section~\ref{sec:analysis} the lecture is analysed, the possible
+implications of this model on student learning is predicted and we
+also show that such lecture would fulfil the requirements of the
+course. Finally we conclude the report in Section~\ref{sec:conclusion}
+where we give general comments and future plan for the presented
+model.
 
 \section{What does it mean to teach programming?}
+\label{sec:meaning_of_programming}
 
 
 \emph{``For a long time it puzzled me how something so expensive, so leading edge,
@@ -64,11 +81,12 @@ common that novice students struggle to learn the most basic programming
 constructs, such as conditional and loop statements. This is due to the fact
 that the implementation is reliant on problem solving and that by merely
 teaching the syntax of a language, we are not providing enough information to
-trigger deep learning, or as \emph{Eric S. Raymond} puts it 
+trigger deep learning, or as \emph{Eric S. Raymond} puts it
 \emph{``Computer science education cannot make anybody an expert programmer any
-more than studying brushes and pigment can make somebody an expert painter''}. 
+more than studying brushes and pigment can make somebody an expert painter''}.
 
 \section{Teaching methods}
+\label{sec:teaching_methods}
 
 The traditional approach in teaching programming courses includes lectures and
 laboratory sessions. During the traditional lecture the teacher covers the
@@ -76,7 +94,7 @@ main concepts and shows examples, while students are in general passive
 recipients of the information. During the lab sessions students solve practical
 assignments and examine individually the results. It is common that large groups
 of students are involved in the programming classes. Thus students usually work
-in small groups (2-3 persons) during the lab sessions. 
+in small groups (2-3 persons) during the lab sessions.
 
 According to Wirth~\cite{wirth}, the traditional lecturing has a number of
 limitations.  ``Firstly, students' attention to what the instructor is saying
@@ -130,15 +148,34 @@ a teacher. Another example of the lab task could be to ask students to
 provide an example of a program which uses just learned programming
 concept.
 
-
 The teacher may demonstrate to the students a badly written program which does
 not behave correctly. The goal of such examples is to teach students
 the good practices and get them excited about the development
 of skills allowing to write good code.
 
+The teacher's attitude to the teaching is very important. If teacher
+is not motivated or does not expect students willing to learn, no
+teaching methods will help to improve. Biggs~\cite{biggs2011teaching}
+presents three levels of thinking about the teaching.
+Jenkins~\cite{journey_Jenkins} discusses these levels, and pointing
+out that every teacher moving through these levels as they gain more
+experience. The first level includes transmitting information, the
+responsibility for learning is lying totally on students. The second
+level still includes elements of information transmission, but more
+focusing on deep learning and activities where students actively
+participate.  The third, and the best level, is focusing just on the
+activities engaging students to learn. Teaching is a process of
+motivation, the goal is ``to persuade the students that learning to
+program (and so programming) is a good thing''. It is pointed out
+in~\cite{journey_Jenkins} that in order to learn something, students
+must be motivated and they ``must expect to succeed''. Thus the role
+of the teacher is to provide students with framework and tools  they
+need to master a subject, interact with students and provide all
+needed information.
 
 
 \section{Practical experiences}
+\label{sec:pract_exp}
 
 
 In programming courses students usually have different backgrounds,
@@ -171,7 +208,7 @@ lecture structure discussing while-loops. The conclusion was that
 ``students are more engaged in this environment, and appreciate the
 ability to interact with their classmates and instructor.''.
 
-In the course ``Programming of Parallel Computers'' given by Uppsala university, 
+In the course ``Programming of Parallel Computers'' given by Uppsala university,
 the teachers implemented flipped classroom teaching method where the
 lectures are available online\footnote{\url{www.scalablelearning.com}}
 and the lectures' time are spent looking through different examples
@@ -229,7 +266,17 @@ generally shifted to the right (i.e higher grades).
 \end{figure}
 
 
-In another attempt to reduce the gap between ``theory'' and ``practice'', the authors have tried a session where the Lab exercise and its corresponding lecture was mixed. In this lecture format, the teachers would teach part of the lecture and ask the students to work with it and implement a program. The overall student experience was positive but there were a few issues regarding the format. First, the size of the tasks and the amount of time for each ``mini-lecture'' should be tweaked. Next, the level of difficulty of each task needs to be taken into account and finally, the ultimate goal of the each lecture is better to be connected to real life applications either in the field of the students or from some common experience.
+In another attempt to reduce the gap between ``theory'' and
+``practice'', the authors have tried a session where the Lab exercise
+and its corresponding lecture was mixed. In this lecture format, the
+teachers would teach part of the lecture and ask the students to work
+with it and implement a program. The overall student experience was
+positive but there were a few issues regarding the format. First, the
+size of the tasks and the amount of time for each ``mini-lecture''
+should be tweaked. Next, the level of difficulty of each task needs to
+be taken into account and finally, the ultimate goal of the each
+lecture is better to be connected to real life applications either in
+the field of the students or from some common experience.
 
 
 %(!!!COMMENT!!! I think the intro is complete. We have to correct the text later.)
@@ -263,29 +310,6 @@ In another attempt to reduce the gap between ``theory'' and ``practice'', the au
 %gave us is with evidence )
 %(!!! COMMENT: I think here is a good example of a sample lab-lecture, I think
 %similar as Ali did )
-
-
-
-
-\section{Levels of thinking about the teaching}
-
-
-The teacher's attitude to the teaching is very important. If teacher is not motivated or does not expect students willing to learn, no teaching methods will help to improve. Biggs~\cite{biggs2011teaching} presents three levels of thinking about
-the teaching.  Jenkins~\cite{journey_Jenkins} discusses these levels,
-and pointing out that every teacher moving through these levels as
-they gain more experience. The first level includes transmitting
-information, the responsibility for learning is lying totally on
-students. The second level still includes elements of information
-transmission, but more focusing on deep learning and activities where
-students actively participate.  The third, and the best level, is
-focusing just on the activities engaging students to learn. Teaching
-is a process of motivation, the goal is ``to persuade the students
-that learning to program (and so programming) is a good thing''. It is
-pointed out in~\cite{journey_Jenkins} that in order to learn
-something, students must be motivated and they ``must expect to
-succeed''. Thus the role of the teacher is to provide students with framework and tools  they need to master a subject, interact with students and provide all needed information.
-
-
 
 
 
@@ -327,12 +351,54 @@ succeed''. Thus the role of the teacher is to provide students with framework an
 
 % section analysis (end)
 
+\section{Approach} % (fold)
+\label{sec:plan}
+
+\url{http://www.cpp.sh}\\
+\url{http://www.socrative.com}\\
+\url{https://www.scalable-learning.com/}\\ %this is an in-house website from UU
+\url{https://getkahoot.com}\\
+\url{https://plickers.com}
+
+\begin{algorithm}
+\caption{Lecture format}
+\label{alg:lect_form}
+\DontPrintSemicolon
+Define a project $\longleftarrow$ An interesting general application\;
+Devide the project into smaller sub-problems for lectures\;
+\For{each sub-problem which corresponds to a lecture}{
+	Scalable-learning $\longleftarrow$ before lecture, course material with question\;
+	Breakdown (if possible) the sub-problem into smaller pieces\;
+	\While{the topic of the lecture is not covered}{
+		Small quize on a piece of the lecture (socrative or kahoot or clicker)\;
+		Ask students to implement and test this piece of software\;
+		Show your solution\;
+		Retorical quize (Put the correct the answers next to ridiculous false answers in order to some up the part)
+			(socrative or kahoot or clicker)
+				e.g. What is the purpose of loops? a. to reduce repetition. b. to reduce code size and so that the program can handle
+				unknown situations. c. To get dizzy d. a and b
+	}
+	Showcase the full alternate sub-application.
+}
+Showcase the full application.
+\end{algorithm}
+
+% section plan (end)
+\section{Analysis} % (fold)
+\label{sec:analysis}
+
 \section{Conclusion} % (fold)
 \label{sec:conclusion}
 
 
-In this report we provide a brief review of the literature on the various teaching methods used in programming courses. 
-We analyze a course evaluation of the programming course at Uppsala university and evaluate traditional lecturing, flipped classroom and hands-on approaches. The main conclusion drawn from the practical experiences is that the active learning facilitates deep learning and students in general prefer doing and discussing the material instead of passively listening to the teacher.
+In this report we provide a brief review of the literature on the
+various teaching methods used in programming courses.  We analyze a
+course evaluation of the programming course at Uppsala university and
+evaluate traditional lecturing, flipped classroom and hands-on
+approaches. The main conclusion drawn from the practical experiences
+is that the active learning facilitates deep learning and students in
+general prefer doing and discussing the material instead of passively
+listening to the teacher.
 
 \bibliography{biblio} \bibliographystyle{siam} % achemso, apsrev
 

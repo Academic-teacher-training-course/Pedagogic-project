@@ -13,7 +13,8 @@
 
 \begin{document}
 
-\maketitle \begin{abstract}
+\maketitle
+\begin{abstract}
 In this project we introduce a teaching technique for fields that require
 practical work in order to be understood deeply. The focus of this article is
 to provide ways to simulate deep learning among students. To this end we describe
@@ -34,20 +35,17 @@ There is a variety of programming languages which are thought in introductory
 courses to programming ~\cite{de2002language}. Over the past years teachers
 discussed on ways of teaching and the contents of a programming courses.
 
-The outline of the report is as follows; In 
-Section~\ref{sec:meaning_of_programming} we look at the expectations 
-from programming courses and descuss what we believe a programming 
-course should focus on. Section~\ref{sec:teaching_methods} covers 
-some of the mainly used teaching methods for programming courses while we provide 
-our own and our colleagues experiences in Section~\ref{sec:pract_exp}. 
-In Section~\ref{sec:plan} we present the expected learning outcome of 
-the course and define structure of the new lecture. We present the tools and facilities needed in order to be able to give this lecture. In
-Section~\ref{sec:analysis} the lecture is analysed, the possible
+The outline of the report is as follows; In
+Section~\ref{sec:meaning_of_programming} we look at the expectations
+from programming courses and discuss what we believe a programming
+course should focus on. Section~\ref{sec:teaching_methods} covers
+some of the mainly used teaching methods for programming courses while we provide
+our own and our colleagues experiences in Section~\ref{sec:pract_exp}.
+In Section~\ref{sec:plan} we define the structure of the new lecture. We present the tools and facilities needed in order to be able to give this lecture. In
+Section~\ref{sec:conclusion} the lecture format is analysed, the possible
 implications of this model on student learning is predicted and we
 also show that such lecture would fulfil the requirements of the
-course. Finally we conclude the report in Section~\ref{sec:conclusion}
-where we give general comments and future plan for the presented
-model.
+course.
 
 \section{What does it mean to teach programming?}
 \label{sec:meaning_of_programming}
@@ -128,10 +126,10 @@ programming''.
 
 The problem-based learning might be a good alternative to the
 traditional lecturing.  The problem introduced to the students should
-be centered around the real practical problems. Students then discuss
+be centred around the real practical problems. Students then discuss
 the problem in groups and identify what they need to solve the
 problem, what do they know and what should be learned. Then the
-teacher present leanguage concepts and elements in the order the
+teacher present language concepts and elements in the order the
 students need to solve the problem. Every time students build
 on their work from the week before. This lets students build a
 substantial application that does real work.
@@ -214,7 +212,7 @@ lectures are available online\footnote{\url{www.scalablelearning.com}}
 and the lectures' time are spent looking through different examples
 where the students try to solve short programming problems. After each
 exercise the teacher shows his solution and discusses the code. We
-analyzed the course evaluation and for reduced the answers to above
+analysed the course evaluation and for reduced the answers to above
 and below average score. We see that of all students in the course
 \begin{itemize}
 	\item $62\%$ of the attendees think that the course quality is
@@ -353,27 +351,49 @@ the field of the students or from some common experience.
 
 \section{Approach} % (fold)
 \label{sec:plan}
+Based on the previous discussions, we propose a lecture format for the programming class described below. The same format may be applied to only one lecture if it is too fine-grained for multiple sessions.
 
-\url{http://www.cpp.sh}\\
-\url{http://www.socrative.com}\\
-\url{https://www.scalable-learning.com/}\\ %this is an in-house website from UU
-\url{https://getkahoot.com}\\
-\url{https://plickers.com}
+We define a project based on an interesting real-life application. The project should consist of smaller sub-problems where each sub-problem correspond to a lecture.
+
+The online lecture material is provided before the session through available tools such as scalable-learning (\url{https://www.scalable-learning.com/}).
+
+The sub-problem may be divided into smaller modules. For each module the teacher should provide a small quiz related to the online material through a learning tool (such as \url{https://getkahoot.com}, \url{http://www.socrative.com}, \url{https://plickers.com}) which will stimulate learning.
+
+The teacher should ask the students to implement the module. Later the teacher should discuss with the students his/her solution.
+
+Finally, a series of ``rhetorical'' question on the module (using the aforementioned tools). The questions should have obvious right and wrong answers and may possibly contain a ridiculous wrong answers. As an example, the following could be a question on loops, \\[4pt]
+
+\emph{Question:} What is the purpose of loops?\\
+\emph{Answers:}
+\begin{itemize}
+	\item[a)] To reduce code size and repetition.
+	\item[b)] So that the program can handle unknown situations
+	\item[c)] To get dizzy
+	\item[d)] a, b
+\end{itemize}
+
+Finally at the end of the lecture block, the students must hand-in the fully working application and during the next lecture the teacher should showcase the correct implementation. The complete lecture block format is shown in Algorithm~\ref{alg:lect_form}.
+
+% \url{http://www.cpp.sh}\\
+% \url{http://www.socrative.com}\\
+% \url{https://www.scalable-learning.com/}\\ %this is an in-house website from UU
+% \url{https://getkahoot.com}\\
+% \url{https://plickers.com}
 
 \begin{algorithm}
 \caption{Lecture format}
 \label{alg:lect_form}
 \DontPrintSemicolon
 Define a project $\longleftarrow$ An interesting general application\;
-Devide the project into smaller sub-problems for lectures\;
+Divide the project into smaller sub-problems for lectures\;
 \For{each sub-problem which corresponds to a lecture}{
 	Scalable-learning $\longleftarrow$ before lecture, course material with question\;
 	Breakdown (if possible) the sub-problem into smaller pieces\;
 	\While{the topic of the lecture is not covered}{
-		Small quize on a piece of the lecture (socrative or kahoot or clicker)\;
+		Small quiz on a piece of the lecture (socrative or kahoot or clicker)\;
 		Ask students to implement and test this piece of software\;
 		Show your solution\;
-		Retorical quize (Put the correct the answers next to ridiculous false answers in order to some up the part)
+		Rhetorical quiz (Put the correct the answers next to ridiculous false answers in order to some up the part)
 			(socrative or kahoot or clicker)
 				e.g. What is the purpose of loops? a. to reduce repetition. b. to reduce code size and so that the program can handle
 				unknown situations. c. To get dizzy d. a and b
@@ -383,22 +403,25 @@ Devide the project into smaller sub-problems for lectures\;
 Showcase the full application.
 \end{algorithm}
 
-% section plan (end)
-\section{Analysis} % (fold)
-\label{sec:analysis}
-
 \section{Conclusion} % (fold)
 \label{sec:conclusion}
 
-
 In this report we provide a brief review of the literature on the
-various teaching methods used in programming courses.  We analyze a
-course evaluation of the programming course at Uppsala university and
-evaluate traditional lecturing, flipped classroom and hands-on
-approaches. The main conclusion drawn from the practical experiences
-is that the active learning facilitates deep learning and students in
-general prefer doing and discussing the material instead of passively
-listening to the teacher.
+various teaching methods used in programming courses.  We analyse the
+evaluation of the course ``Programming of parallel computers''
+at Uppsala university and evaluate traditional lecturing, flipped
+classroom and hands-on approaches.
+The main conclusion drawn from the practical experiences
+is that active learning facilitates deep learning and students, in
+general, prefer doing and discussing the material instead of passively
+listening to a teacher.
+We provide a format for a lecture-block in programming courses which mixes
+the flipped-classroom, problem-based learning, case studies and game-based approaches.
+The necessary facilities needed for this lecture-block includes a computer room,
+Clickers or mobile phones, access to internet (before the lectures).
+This format should keep the students involved in their own learning and keep them
+motivated through out the lecture-block. Moreover, it should provide experience with building blocks
+of real-life applications, how they should be approached and what is the best practice.
 
 \bibliography{biblio} \bibliographystyle{siam} % achemso, apsrev
 
